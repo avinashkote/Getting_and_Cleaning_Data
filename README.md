@@ -6,18 +6,19 @@ This repository contains project code for the Coursera "Getting and Cleaning dat
 
 #Data
 
-The data comes from experiments carried on a group of 30 volunteers with the Samsung Galaxy S smartphone. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+The data comes from experiments carried on a group of 30 volunteers with the Samsung Galaxy S smartphone. 
+The dataset includes the following files:
+=========================================
+- 'README.txt'
+- 'features_info.txt': Shows information about the variables used on the feature vector.
+- 'features.txt': List of all features.
+- 'activity_labels.txt': Links the class labels with their activity name.
+- 'train/X_train.txt': Training set.
+- 'train/y_train.txt': Training labels.
+- 'test/X_test.txt': Test set.
+- 'test/y_test.txt': Test labels.
+The following files are available for the train and test data.
 
-The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
+The run_analysis.R which will merge the test and training sets together, adds labels and create a tidy data set containing the means of all the columns per test subject and per activity. 
 
-I created a script called run_analysis.R which will merge the test and training sets together. Prerequisites for this script:
-
-    the UCI HAR Dataset must be extracted and..
-    the UCI HAR Dataset must be availble in a directory called "UCI HAR Dataset"
-
-After merging testing and training, labels are added and only columns that have to do with mean and standard deviation are kept.
-
-Lastly, the script will create a tidy data set containing the means of all the columns per test subject and per activity. This tidy dataset will be written to a tab-delimited file called tidy.txt, which can also be found in this repository.
-About the Code Book
-
-The CodeBook.md file explains the transformations performed and the resulting data and variables.
+The CodeBook.md file explains the process followed.
